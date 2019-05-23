@@ -1,0 +1,14 @@
+	
+var section = document.getElementById("detail_mail")
+section.innerHTML = ""
+section.insertAdjacentHTML("afterbegin", "<%= j render 'emailDetail', emailDetail: @email %>")
+
+
+var section2 = document.getElementById("btnEmail<%=@email.id%>")
+console.log (section2)
+section2.innerHTML = ""
+section2.insertAdjacentHTML("afterbegin","<i class='fas fa-envelope-open-text'></i>")
+
+var section3 = document.getElementById("textemail<%=@email.id%>")
+console.log (section3)
+	

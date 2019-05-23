@@ -1,0 +1,13 @@
+<div class="card" style="width: 50rem;">
+		  <div class="card-body">
+ 			<h6 class="card-subtitle mb-2 text-muted">Email reçu le <%=@email.created_at.strftime('%d/%m/%y à %T')
+%></h6>
+		    <hr>
+		    <h5 class="card-title">Objet : <%=@email.object%></h5>
+		    <hr>
+			<p class="card-text"><%=@email.body%></p>
+			
+   			<hr>
+            <a href="<%=email_path(@email.id)%>" class="btn btn-danger" data-confirm="ëtes-vous sûr ?" data-method="DELETE">Supprimer</a>
+            <a href="<%=email_path(@email.id)%>" class="btn btn-secondary" data-method="UPDATE">Marquer comme non lu</a>
+	   </div>

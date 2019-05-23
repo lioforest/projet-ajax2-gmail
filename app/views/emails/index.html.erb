@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>GmailLyonnais</title>
+
+    <!-- Bootstrap core CSS -->
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+<main role="main">
+
+
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+
+  <div class="jumbotron">
+
+    <div class="container d-flex flex-column align-items-center">
+      <h3 class="display-5 text-center">GmailLyonnais !</h3>
+       <a
+        href="<%= emails_path %>"
+        data-method="POST"
+        data-remote>
+        <button class="btn btn-secondary text-center">Recevoir un email</button>
+        </a>
+  
+    </div>
+  </div>
+
+   <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-md-1">
+      </div>
+
+      <div class="col-md-4" >
+        <h2>Liste des emails </h2>
+        <hr>
+      <ul id="email_list">  
+      <% @emails.each do |email|  %>
+           <%= render 'email', email: email %>
+      <% end %>
+      </ul>
+
+
+
+      </div>
+      <div class="col-md-6">
+        <h2>Email Consulté</h2>
+        <hr>
+
+        <div id ="detail_mail">
+        </div>
+      </div>
+
+      <div class="col-md-1">
+      </div>
+
+    </div>
+
+    <hr>
+
+
+</main>
+
+<footer class="container">
+  <p>&copy; lioforest</p>
+</footer>
+</body>
+</html>

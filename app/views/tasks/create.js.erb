@@ -1,0 +1,3 @@
+var category = document.getElementById("<%= @category.title %>");
+console.log(category) 
+document.getElementById("<%= @category.title %>").insertAdjacentHTML("beforeend", "<%= j render 'task', task: @task %>")

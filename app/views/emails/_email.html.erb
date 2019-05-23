@@ -1,0 +1,23 @@
+        <li id="email<%=email.id%>">
+           
+            <a
+            href="<%= email_path(email.id) %>"
+            data-method="GET"
+            data-remote>
+
+            <% if email.read %>
+	            <button class="btn" id="btnEmail<%=email.id%>">
+	            	<i class="fas fa-envelope-open-text"></i>
+		        </button>
+	            </a> 
+               <span id="textemail<%=email.id%>" class="font-weight-normal" > <%= email.object  %></span>
+
+		    <% else%>
+	            <button class="btn" id="btnEmail<%=email.id%>">
+	            	<i class="fas fa-envelope"></i>
+		        </button>
+	            </a> 
+               <span id="textemail<%=email.id%>" class="font-weight-bold"> <%= email.object  %></span>
+	        <% end %>
+        </li>
+
